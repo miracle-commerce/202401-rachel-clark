@@ -1,0 +1,2 @@
+{%layout none %}
+{{content_for_header | replace: "window.attachEvent('onload', asyncLoad);", "window.asyncLoad=asyncLoad;" | replace: "window.addEventListener('load', asyncLoad, false);", "window.asyncLoad=asyncLoad;"}}

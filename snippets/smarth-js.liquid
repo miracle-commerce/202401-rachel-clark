@@ -1,0 +1,1190 @@
+<script type="text/javascript">
+	</script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+
+<script type="text/javascript">
+var userid = '';
+
+    var existingScript = document.getElementById('smarthPopper');
+    if (!existingScript) {
+
+        var countrysmarth = 'smarthighlightcountry';
+        var smarthcountryName = '';
+
+        setTimeout(function(){ 
+            checksmarthjquery();
+        }, 1000);
+
+    }
+
+    function getCountryCodesh() {
+        if(thaliacustomercountry == ''){ 
+        thaliaCustomerCookie();
+        thaliacustomercountry = thaliaGetCookie("thaliacustomercountry");
+        getCountryNamesh(thaliacustomercountry);
+        }else{
+        getCountryNamesh(thaliacustomercountry);
+        }
+        }
+
+        function getCountryNamesh(countryCode) {
+         var country_data = "AF,Afghanistan|AL,Albania|DZ,Algeria|AD,Andorra|AO,Angola|AI,Anguilla|AQ,Antarctica|AG,Antigua and Barbuda|AR,Argentina|AM,Armenia|AW,Aruba|AU,Australia|AT,Austria|AZ,Azerbaijan|BS,Bahamas|BH,Bahrain|BD,Bangladesh|BB,Barbados|BY,Belarus|BE,Belgium|BZ,Belize|BJ,Benin|BM,Bermuda|BT,Bhutan|BO,Bolivia|BQ,Bonaire,Sint Eustatius and Saba|BA,Bosnia and Herzegovina|BW,Botswana|BV,Bouvet Island|BR,Brazil|IO,British Indian Ocean Territory|BN,Brunei Darussalam|BG,Bulgaria|BF,Burkina Faso|BI,Burundi|CV,Cabo Verde|KH,Cambodia|CM,Cameroon|CA,Canada|KY,Cayman Islands|CF,Central African Republic|TD,Chad|CL,Chile|CN,China|CX,Christmas Island|CC,Cocos (Keeling) Islands|CO,Colombia|KM,Comoros|CG,Congo|CD,Congo,Democratic Republic of the|CK,Cook Islands|CR,Costa Rica|CI,Côte d'Ivoire|HR,Croatia|CU,Cuba|CW,Curaçao|CY,Cyprus|CZ,Czech Republic|DK,Denmark|DJ,Djibouti|DM,Dominica|DO,Dominican Republic|EC,Ecuador|EG,Egypt|SV,El Salvador|GQ,Equatorial Guinea|ER,Eritrea|EE,Estonia|SZ,Eswatini|ET,Ethiopia|FK,Falkland Islands (Malvinas)|FO,Faroe Islands|FJ,Fiji|FI,Finland|FR,France|GF,French Guiana|PF,French Polynesia|TF,French Southern Territories|GA,Gabon|GM,Gambia|GE,Georgia|DE,Germany|GH,Ghana|GI,Gibraltar|GR,Greece|GL,Greenland|GD,Grenada|GP,Guadeloupe|GU,Guam|GT,Guatemala|GG,Guernsey|GN,Guinea|GW,Guinea-Bissau|GY,Guyana|HT,Haiti|HM,Heard Island and McDonald Islands|VA,Holy See|HN,Honduras|HK,Hong Kong|HU,Hungary|IS,Iceland|IN,India|ID,Indonesia|IR,Iran|IQ,Iraq|IE,Ireland|IM,Isle of Man|IL,Israel|IT,Italy|JM,Jamaica|JP,Japan|JE,Jersey|JO,Jordan|KZ,Kazakhstan|KE,Kenya|KI,Kiribati|KP,Korea|KR,Korea|KW,Kuwait|KG,Kyrgyzstan|LA,Lao People's Democratic Republic|LV,Latvia|LB,Lebanon|LS,Lesotho|LR,Liberia|LY,Libya|LI,Liechtenstein|LT,Lithuania|LU,Luxembourg|MO,Macao|MG,Madagascar|MW,Malawi|MY,Malaysia|MV,Maldives|ML,Mali|MT,Malta|MH,Marshall Islands|MQ,Martinique|MR,Mauritania|MU,Mauritius|YT,Mayotte|MX,Mexico|FM,Micronesia|MD,Moldova|MC,Monaco|MN,Mongolia|ME,Montenegro|MS,Montserrat|MA,Morocco|MZ,Mozambique|MM,Myanmar|NA,Namibia|NR,Nauru|NP,Nepal|NL,Netherlands|NC,New Caledonia|NZ,New Zealand|NI,Nicaragua|NE,Niger|NG,Nigeria|NU,Niue|NF,Norfolk Island|MK,North Macedonia|MP, Northern Mariana Islands|NO,Norway|OM,Oman|PK,Pakistan|PW,Palau|PS,Palestine|PA,Panama|PG,Papua New Guinea|PY,Paraguay|PE,Peru|PH,Philippines|PN,Pitcairn|PL,Poland|PT,Portugal|PR,Puerto Rico|QA,Qatar|RE,Réunion|RO,Romania|RU,Russian Federation|RW,Rwanda|BL,Saint Barthélemy|SH,Saint Helena|KN,Saint Kitts and Nevis|LC,Saint Lucia|MF,Saint Martin (French part)|PM,Saint Pierre and Miquelon|VC,Saint Vincent and the Grenadines|WS,Samoa|SM,San Marino|ST,Sao Tome and Principe|SA,Saudi Arabia|SN,Senegal|RS,Serbia|SC,Seychelles|SL,Sierra Leone|SG,Singapore|SX,Sint Maarten (Dutch part)|SK,Slovakia|SI,Slovenia|SB,Solomon Islands|SO,Somalia|ZA,South Africa|GS,South Georgia and the South Sandwich Islands|SS,South Sudan|ES,Spain|LK,Sri Lanka|SD,Sudan|SR,Suriname|SJ,Svalbard and Jan Mayen|SE,Sweden|CH,Switzerland|SY,Syrian Arab Republic|TW,Taiwan|TJ,Tajikistan|TZ,Tanzania|TH,Thailand|TL,Timor-Leste|TG,Togo|TK,Tokelau|TO,Tonga|TT,Trinidad and Tobago|TN,Tunisia|TR,Turkey|TM,Turkmenistan|TC,Turks and Caicos Islands|TV,Tuvalu|UG,Uganda|UA,Ukraine|AE,United Arab Emirates|GB,United Kingdom|US,United States|UM,United States Minor Outlying Islands|UY,Uruguay|UZ,Uzbekistan|VU,Vanuatu|VE,Venezuela|VN,Viet Nam|VG,Virgin Islands|VI,Virgin Islands|WF,Wallis and Futuna|EH,Western Sahara|YE,Yemen|ZM,Zambia|ZW,Zimbabwe";
+            var countries = country_data.split("|");
+            for (var i = 0; i < countries.length; i++) {
+            var country = countries[i].split(",");
+            var countryCodedata = country[0];
+            var Visitorcountry = country[1];
+            if(countryCode== countryCodedata)
+            {
+               var VisitorCountryName=Visitorcountry;
+            }
+            }
+            var visitorclass = document.getElementsByClassName('smarthVisitorCountry');
+                for (var i = 0; i < visitorclass.length; i++) {
+                var issetvisitorcountryrule = visitorclass[i].getAttribute('visitorcountryrule');  
+                var secondChild = visitorclass[i].querySelector('div:nth-child(1)');
+                var thirdChild = secondChild.querySelector('div:nth-child(1)'); 
+                if( issetvisitorcountryrule == '1'){
+                // $('.primebVisitorCountryName').replaceWith(VisitorCountryName);
+                // visitorclass[i].style.display= 'block';
+                var elements = document.querySelectorAll('.smarthVisitorCountryName');
+                elements.forEach(function(element) {
+                element.textContent = VisitorCountryName;
+                });
+                }
+                }
+        }
+
+        
+
+
+    function checksmarthjquery() {
+      if (window.jQuery) {
+      	checkSmarthVariantInventory("{{product.selected_or_first_available_variant.title | escape }}","first");
+        $(document).on("change", ".single-option-selector", function() {
+            var optionMaph = [];
+            if(optionMaph.length == 0){
+                $(".single-option-selector").each(function(key) {
+                optionMaph[key] = $(this).val();
+                });
+                checkSmarthVariantInventory(optionMaph);
+            }
+        });
+
+        $(document).on("change", ".ProductForm__Option select", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".ProductForm__Option select").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".tt-options-swatch li", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".tt-options-swatch li").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".swatch-element", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".swatch-element").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("change", ".form__input--select", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".form__input--select").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("change", ".sgl-opt-selector-product-template", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".sgl-opt-selector-product-template").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".tt-options-swatch li", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".tt-options-swatch li").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("change", ".product-option-value-item", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".product-option-value-item").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".clickyboxes a", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".clickyboxes a").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("change", "[data-product-options-container] .form-field-input", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $("[data-product-options-container] .form-field-input").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("change", "#data-product-option-0", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $("#data-product-option-0").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".product-options__section .active", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".product-options__section .active").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".product-options__value", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".product-options__value").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".variant-input", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".variant-input").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("change", ".product-form__single-selector", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".product-form__single-selector").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".gt_swatches--select.gf_active", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".gt_swatches--select.gf_active").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".nt-swatch", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".nt-swatch").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("change", ".disclosure--input", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".disclosure--input").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".product-form__input input", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".product-form__input input[type=radio]:checked").each(function(key) {
+              optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".swatch-container input", function() {
+          var optionMaph = [];
+          if(optionMaph.length == 0){
+            $(".swatch-container input[type=radio]:checked").each(function(key) {
+            optionMaph[key] = $(this).val();
+            });
+            checkSmarthVariantInventory(optionMaph);
+          }
+        });
+
+        $(document).on("click", ".swatch--gl input", function() {
+            var optionMap = [];
+            if(optionMap.length == 0){
+                $(".swatch--gl input[type=radio]:checked").each(function(key) {
+                optionMap[key] = $(this).val();
+                });
+                checkSmarthVariantInventory(optionMap);
+            }
+        });
+        setTimeout(function(){ 
+        getCountryCodesh(); 
+        }, 500); 
+        
+      } else {
+            	
+              setTimeout(function() { checksmarthjquery() }, 2000);
+          }
+    }
+
+    function removesmarthighlight() {
+        var smarth1 = document.getElementsByClassName('1smarthDesktop');
+        if(smarth1[0]){
+            var remove_div1 = document.getElementsByClassName('1smartHighlights');
+            for(var i = 0; i < remove_div1.length; i++) {
+                if(remove_div1[i]){
+                    remove_div1[i].style.display= 'block';
+                }
+            }
+            
+        } else {
+            var remove_div1 = document.getElementsByClassName('1smartHighlights');
+            if(remove_div1[0]){
+                remove_div1[0].style.cssText = 'display:none !important';
+            }
+        }
+        var smarth2 = document.getElementsByClassName('2smarthDesktop');
+        if(smarth2[0]){
+            var remove_div2 = document.getElementsByClassName('2smartHighlights');
+            for(var i = 0; i < remove_div2.length; i++) {
+                if(remove_div2[i]){
+                    remove_div2[i].style.display= 'block';
+                }
+            }
+        } else {
+            var remove_div2 = document.getElementsByClassName('2smartHighlights');
+            if(remove_div2[0]){
+                remove_div2[0].style.cssText = 'display:none !important';
+                // remove_div2[0].parentNode.removeChild(remove_div2[0]);
+            }
+        }
+        var smarth3 = document.getElementsByClassName('3smarthDesktop');
+        if(smarth3[0]){
+            var remove_div3 = document.getElementsByClassName('3smartHighlights');
+            for(var i = 0; i < remove_div3.length; i++) {
+                if(remove_div3[i]){
+                    remove_div3[i].style.display= 'block';
+                }
+            }
+        } else {
+            var remove_div3 = document.getElementsByClassName('3smartHighlights');
+            if(remove_div3[0]){
+                remove_div3[0].style.cssText = 'display:none !important';
+                // remove_div3[0].parentNode.removeChild(remove_div3[0]);
+            }
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+         getCountryCodesh(); 
+
+        setTimeout(function(){ 
+        if ('InstallTrigger' in window && userid==3344) {
+        var elements = document.querySelectorAll('.smartHighlights');
+        elements.forEach(function(element) {
+        element.style.setProperty('display', 'block', 'important');
+        });
+        }
+        }, 3000); 
+
+        if(userid==4300){
+          smarthonload();  
+        }else{
+            setTimeout(function(){ 
+            smarthonload();
+        }, 500);
+
+        }  
+    });
+
+    function expdeliveryhdatesmart(value,count) {
+        var weekdays = '';
+        var dateformatselected = '';
+        var datelang = 'en';
+        var smarthTextdate = document.getElementsByClassName('smarthTitle');
+        var realvalue = value;
+        var pos = realvalue.indexOf("[[today");
+        var pos2 = realvalue.indexOf("]]");
+        var startres = realvalue.slice(pos+8, pos2);
+        realvalue = realvalue.replace("[[today,", "" );
+        realvalue = realvalue.replace("]]", "" );
+        var pos3 = realvalue.indexOf("[[today");
+        var pos4 = realvalue.indexOf("]]");
+        var endres = realvalue.slice(pos3+8, pos4);
+        realvalue = realvalue.replace("[[today,", "" );
+        realvalue = realvalue.replace("]]", "" );
+        var getlang = startres.split(",");
+        var wrongdays = weekdays.split(",");
+        var startDate = new Date(new Date().getTime()+(parseInt(startres)*24*60*60*1000));
+        var today = new Date(new Date().getTime());
+        var firstinc=0;
+        while (today <= startDate) {
+            var getday = String(today.getDay());
+            if(wrongdays.indexOf(getday) != -1){
+            startDate.setDate(startDate.getDate() + 1);
+            firstinc++;
+            }
+            today.setDate(today.getDate() + 1);
+        }
+        var setlang = 'en';
+        if(getlang.length > 1){
+            setlang = getlang[1];
+        }
+        moment.locale(setlang);
+        value = value.replace("[[today,"+startres+"]]", moment(startDate).locale(setlang).format(dateformatselected));
+
+        var extradays = firstinc+parseInt(endres);
+        var endDate = new Date(new Date().getTime()+(extradays*24*60*60*1000));
+        var todayend = startDate;
+        var secinc=0;
+        while (todayend <= endDate) {
+            var getday = String(todayend.getDay());
+            if(wrongdays.indexOf(getday) != -1){
+            endDate.setDate(endDate.getDate() + 1);
+            secinc++;
+            }
+            todayend.setDate(todayend.getDate() + 1);
+        }
+        value = value.replace("[[today,"+endres+"]]", moment(endDate).locale(setlang).format(dateformatselected));
+        smarthTextdate[count].innerHTML = value;
+        var getchild = smarthTextdate[count].getElementsByClassName('smart-counter');
+        if(getchild[0]){
+            getchild[0].classList.remove("smart-counter");
+        }
+    }
+
+    function expdeliveryhsubdatesmart(value,count) {
+        var weekdays = '';
+        var dateformatselected = '';
+        var datelang = 'en';
+        var smarthTextdate = document.getElementsByClassName('smarthSubTitle');
+        var realvalue = value;
+        var pos = realvalue.indexOf("[[today");
+        var pos2 = realvalue.indexOf("]]");
+        var startres = realvalue.slice(pos+8, pos2);
+        realvalue = realvalue.replace("[[today,", "" );
+        realvalue = realvalue.replace("]]", "" );
+        var pos3 = realvalue.indexOf("[[today");
+        var pos4 = realvalue.indexOf("]]");
+        var endres = realvalue.slice(pos3+8, pos4);
+        realvalue = realvalue.replace("[[today,", "" );
+        realvalue = realvalue.replace("]]", "" );
+        var getlang = startres.split(",");
+        var wrongdays = weekdays.split(",");
+        var startDate = new Date(new Date().getTime()+(parseInt(startres)*24*60*60*1000));
+        var today = new Date(new Date().getTime());
+        var firstinc=0;
+        while (today <= startDate) {
+            var getday = String(today.getDay());
+            if(wrongdays.indexOf(getday) != -1){
+            startDate.setDate(startDate.getDate() + 1);
+            firstinc++;
+            }
+            today.setDate(today.getDate() + 1);
+        }
+        var setlang = 'en';
+        if(getlang.length > 1){
+            setlang = getlang[1];
+        }
+        moment.locale(setlang);
+        value = value.replace("[[today,"+startres+"]]", moment(startDate).locale(setlang).format(dateformatselected));
+
+        var extradays = firstinc+parseInt(endres);
+        var endDate = new Date(new Date().getTime()+(extradays*24*60*60*1000));
+        var todayend = startDate;
+        var secinc=0;
+        while (todayend <= endDate) {
+            var getday = String(todayend.getDay());
+            if(wrongdays.indexOf(getday) != -1){
+            endDate.setDate(endDate.getDate() + 1);
+            secinc++;
+            }
+            todayend.setDate(todayend.getDate() + 1);
+        }
+        value = value.replace("[[today,"+endres+"]]", moment(endDate).locale(setlang).format(dateformatselected));
+
+        smarthTextdate[count].innerHTML = value;
+        var getsubchild = smarthTextdate[count].getElementsByClassName('smart-d-none');
+        if(getsubchild[0]){
+            getsubchild[0].classList.remove("smart-d-none");
+        }
+    }
+
+    function checkSmarthVariantInventory(optionMap,myfirstone='') {
+        var productname = '{{product.handle}}';  
+        var variantproductid = '{{product.id}}';   
+        var mydomclass = document.getElementsByClassName('smarthVariantInventory');   
+        if(mydomclass.length > 0){
+            if(optionMap.length > 0){  
+                var realval = '';
+                if(myfirstone == "first"){
+                    realval = optionMap;
+                }else{
+                    for(var i = 0; i < optionMap.length; i++){
+                        var spaces = ' / ';
+                        if(i == 0){
+                            spaces = '';
+                        }
+                        realval += spaces+optionMap[i];
+                    }
+                }
+                
+                var smartHighlightsAll = document.getElementsByClassName('smartHighlights');
+                for (var i = 0; i < smartHighlightsAll.length; i++) {
+                    var smarthOuterClass = smartHighlightsAll[i].getAttribute('data-smarthOuterClass');
+                    var smarthOuterStyle = smartHighlightsAll[i].getAttribute('data-smarthOuterStyle');
+                    var smarthInnerClass = smartHighlightsAll[i].getAttribute('data-smarthInnerClass');
+                    var smarthInnerStyle = smartHighlightsAll[i].getAttribute('data-smarthInnerStyle');
+                    var smarthImageClass = smartHighlightsAll[i].getAttribute('data-smarthImageClass');
+                    var smarthImageStyle = smartHighlightsAll[i].getAttribute('data-smarthImageStyle');
+                    var smarthTextClass = smartHighlightsAll[i].getAttribute('data-smarthTextClass');
+                    var smarthTextStyle = smartHighlightsAll[i].getAttribute('data-smarthTextStyle');
+                    var smarthGroup = smartHighlightsAll[i].getAttribute('data-smarthGroup');
+                    hitsmarthpage(productname,variantproductid,smarthOuterClass,smarthOuterStyle,smarthInnerClass,smarthInnerStyle,smarthImageClass,smarthImageStyle,smarthTextClass,smarthTextStyle,smarthGroup,realval)
+                }
+            }
+        }
+        setTimeout(function(){ 
+        getCountryCodesh(); 
+        }, 500); 
+    }
+
+    function hitsmarthpage(productname,variantproductid,smarthOuterClass,smarthOuterStyle,smarthInnerClass,smarthInnerStyle,smarthImageClass,smarthImageStyle,smarthTextClass,smarthTextStyle,smarthGroup,realval) {
+        
+        var result = Math.random().toString(36).substring(2,7);
+        if(smarthGroup == 1){
+			var urlhit = productname+'/?view=smarthvariant&sort_by='+result+'&outerclass=='+smarthOuterClass+'&outerstyle=='+smarthOuterStyle+'&innerclass=='+smarthInnerClass+'&innerstyle=='+smarthInnerStyle+'&imageclass=='+smarthImageClass+'&imagestyle=='+smarthImageStyle+'&textclass=='+smarthTextClass+'&textstyle=='+smarthTextStyle+'&group==1&page=='+realval;
+        }else if(smarthGroup == 2){
+			var urlhit = productname+'/?view=smarthvarianttwo&sort_by='+result+'&outerclass=='+smarthOuterClass+'&outerstyle=='+smarthOuterStyle+'&innerclass=='+smarthInnerClass+'&innerstyle=='+smarthInnerStyle+'&imageclass=='+smarthImageClass+'&imagestyle=='+smarthImageStyle+'&textclass=='+smarthTextClass+'&textstyle=='+smarthTextStyle+'&group==2&page=='+realval;
+        }else{
+            var urlhit = productname+'/?view=smarthvariantthree&sort_by='+result+'&outerclass=='+smarthOuterClass+'&outerstyle=='+smarthOuterStyle+'&innerclass=='+smarthInnerClass+'&innerstyle=='+smarthInnerStyle+'&imageclass=='+smarthImageClass+'&imagestyle=='+smarthImageStyle+'&textclass=='+smarthTextClass+'&textstyle=='+smarthTextStyle+'&group==3&page=='+realval;
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", urlhit, true);
+        xhr.onreadystatechange  = function() {
+            if (this.readyState === XMLHttpRequest.DONE) {
+                if (this.status === 200) {
+                    if(this.responseText == 0){
+                        $('.outersmarth'+variantproductid+'-'+smarthGroup+' .smarthText .smarthVariantInventory').html("0");
+                        $('.outersmarth'+variantproductid+'-'+smarthGroup+' .smart-counter').removeClass("smart-counter");
+                        $('.outersmarth'+variantproductid+'-'+smarthGroup+' .hidevariant').remove();
+                    }else{
+                        $('.outersmarth'+variantproductid+'-'+smarthGroup).replaceWith( this.responseText );
+                        $('.outersmarth'+variantproductid+'-'+smarthGroup+' .smart-counter').removeClass("smart-counter");
+                        var countryclassh = document.getElementsByClassName('smarthCountry');
+                        for (var i = 0; i < countryclassh.length; i++) {
+                            var counrtylisth = countryclassh[i].getAttribute('data-countryselectedh');
+                            var position = counrtylisth.search(smarthcountryName);
+                            if(position < 0){ 
+                                countryclassh[i].style.cssText = 'display:none !important';
+                            }else{
+                                countryclassh[i].style.cssText = 'display:unset !important';
+                            }
+                        }
+                        setTimeout(function(){ 
+                            smarthonload();
+                        }, 500); 
+                    }
+                } else {
+                    console.log('failed variant req');
+                }
+            }
+        };
+        xhr.send();
+
+    }
+
+    function smarthsetlivevisit(mypage,myproductid,highclassname) {
+        setTimeout(function(){ 
+
+            var settimelive = ;
+            var setvisitlimit = ;
+
+            var d = new Date();
+            var time = setcookietimestamphsmart(settimelive);
+            var mytime = '';
+            if(settimelive < 5){
+                mytime = (time * 60 );
+            }else if(settimelive > 4 && settimelive < 8){
+                mytime =(time * 60 * 60 );
+            }else if(settimelive > 7){
+                mytime = (time * 24 * 60 * 60 );
+            }
+
+            var realhighclass = '';
+            if(highclassname == 'smarthloop'){
+                realhighclass = "smartvisitshtitle";
+            }else{
+                realhighclass = 'smartvisitshsubtitle';
+            }
+
+            var smartloop2 = document.getElementsByClassName(highclassname);
+            for (var i = 0; i < smartloop2.length; i++) {
+                var bigloop2 = smartloop2[i].parentElement;
+   				var smallloop2 = bigloop2.parentElement;
+                var parentloop2 = smallloop2.getAttribute('data-smartproductid');
+                var myuser = getCookiesmarth("smartvisits"+parentloop2);
+                if (myuser != "") {
+                    myhttpreqhsmart(parentloop2,0,mytime,setvisitlimit,highclassname,realhighclass);
+                } else {
+                    myhttpreqhsmart(parentloop2,1,mytime,setvisitlimit,highclassname,realhighclass);
+                    setCookiesmarth("smartvisits"+parentloop2, 'setsmartvisits', settimelive);
+                }
+
+            }
+
+            var smartloop = document.getElementsByClassName(highclassname);
+            for (var i = 0; i < smartloop.length; i++) {
+                if(mypage == 'product'){
+                    var bigloop = smartloop[i].parentElement;
+   				    var smallloop = bigloop.parentElement;
+                    var parentloop = smallloop.getAttribute('data-smartproductid');
+                    if(parentloop == myproductid){
+                        smartloop[i].classList.add(realhighclass+parentloop);
+                    }else{
+                        var removeloop = smartloop[i].parentElement;
+                        var bigloop = removeloop.parentElement;
+                        var removeloop2 = bigloop.parentElement;
+                        removeloop2.style.visibility = 'hidden';
+                        smartloop[i].classList.remove(highclassname);
+                        removeloop2.remove();
+                    }
+                }else{
+                  var oldloop = smartloop[i].parentElement;
+                  var bigloop = oldloop.parentElement;
+                  var newloop = bigloop.parentElement;
+                  newloop.style.visibility = 'hidden';
+                  smartloop[i].classList.remove(highclassname);
+                  newloop.remove();
+                }
+            }
+
+        }, 500);
+    }
+
+    function myhttpreqhsmart(lastid,mynew,gettime,setvisitlimit,highclassname,realhighclass) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var pageliveview = JSON.parse(this.responseText);
+                var smartvisits = document.getElementsByClassName(realhighclass+lastid);
+                for (var i = 0; i < smartvisits.length; i++) {
+                    if(setvisitlimit < pageliveview.pageviews){
+                        smartvisits[i].innerHTML = pageliveview.pageviews;
+                        var removeloop = smartvisits[i].parentElement;
+                        removeloop.style.visibility = 'visible';
+                    }else{
+                        var removeloop = smartvisits[i].parentElement;
+                        removeloop.style.visibility = 'hidden';
+                        smartvisits[i].classList.remove(highclassname);
+                        removeloop.remove();
+                        removesmarthighlight();
+                    }
+                        
+                }
+            }
+        };
+        xhttp.open("GET","https://visitcounterstaging.thalia-apps.com/?shopifyid="+lastid+"&new="+mynew+"&time="+gettime, true);
+        xhttp.send();
+    }
+
+    function mymodalsmarth() {
+      var target = document.getElementById("smart-modal-window");
+      var parenttarget = target.parentElement;
+      if (parenttarget.classList.contains('smart-modal-open')) {
+        parenttarget.classList.remove('smart-modal-open');
+        document.getElementById('smart-modal-content').innerHTML = '';
+      }
+    }
+    
+    function shlink(highlightval,links,smarthighlightid,modalsize) {
+
+        if(highlightval != ''){
+
+            var highlightlink = highlightval;
+            if(links == 0){
+                window.location.href = highlightlink;
+            }else{
+                window.open(highlightlink,'_blank');
+            }
+
+        }
+        if(links == 2){
+            var target = document.getElementById("smart-modal-outer");
+            var myclasses = '';
+            if(modalsize == 0){
+                myclasses = 'smart-modal-window smart-modal-small';
+            }else if(modalsize == 2){
+                myclasses = 'smart-modal-window smart-modal-large';
+            }else{
+                myclasses = 'smart-modal-window';
+            }
+            
+            document.getElementById('smart-modal-outer').classList.add('smart-modal-open');
+            var setclass = document.getElementById('smart-modal-window');
+            setclass.className = '';
+            setclass.className = myclasses;
+            var xhr = new XMLHttpRequest();
+            var url = '/?view=smartmeta&id==highlight-popup-'+smarthighlightid;
+            xhr.open("GET", url, true);
+            xhr.setRequestHeader("Cache-Control", "max-age=3600");
+            xhr.onreadystatechange = function() {
+                // if (this.readyState === XMLHttpRequest.DONE) {
+                    if (this.status === 200) {
+                        document.getElementById('smart-modal-content').innerHTML = this.responseText;
+                    } else {
+                        console.log(this.status, this.statusText);
+                    }
+                // }
+                };
+                xhr.send();
+        }
+    
+    }
+
+    function toValidDate(datestring){
+        return datestring.replace(/(\d{2})(\/)(\d{2})/, "$3$2$1");   
+    }
+
+    function myTimer(newvalue,count) {
+
+        var smarthText2 = document.getElementsByClassName('smarthTitle');
+        var againvalue = newvalue;
+        var pos3 = newvalue.indexOf("[[ CountdownTimer:");
+        var pos4 = newvalue.indexOf("M,");
+        if(pos4 < 0){
+            pos4 = newvalue.indexOf(" ]]");
+            var res = newvalue.slice(pos3+18, pos4);
+        }else{
+            var res = newvalue.slice(pos3+18, pos4+1);
+        }
+        var pos5 = newvalue.indexOf(" ]]");
+        var pos6 = newvalue.indexOf("|");
+        var endres = againvalue.slice(pos3+18, pos5);
+        if(pos6 < 0){
+            var customtext = '';
+        }else{
+            var customtext = againvalue.slice(pos6+1, pos5);
+        }
+        newvalue = newvalue.replace("[[ CountdownTimer:", "" );
+        newvalue = newvalue.replace(" ]]", "" );
+        endres = endres.replace(" |"+customtext , "" );
+        var getlang = endres.split(",");
+        var setlang2 = 'en';
+        if(getlang.length > 1){
+            if(getlang[1] == 'custom'){
+                if (getlang[2] == null){
+                    var setdays = '';
+                }else{
+                    var setdays = getlang[2];
+                }
+                if (getlang[3] == null){
+                    var sethours = '';
+                }else{
+                    var sethours = getlang[3];
+                }
+                if (getlang[4] == null){
+                    var setminutes = '';
+                }else{
+                    var setminutes = getlang[4];
+                }
+                if (getlang[5] == null){
+                    var setseconds = '';
+                }else{
+                    var setseconds = getlang[5];
+                }
+            }else{
+                setlang2 = getlang[1];
+                var setmoment = moment();
+                setmoment.locale(setlang2);
+                setmoment.subtract({hours: 0, minutes: 0, seconds: 35});
+                var getseconds = setmoment.toNow(true);
+                setmoment.subtract({hours: 0, minutes: 10, seconds: 59});
+                var getminutes = setmoment.toNow(true);
+                setmoment.subtract({hours: 5, minutes: 59, seconds: 59});
+                var gethours = setmoment.toNow(true);
+                setmoment.subtract({hours: 222, minutes: 59, seconds: 59});
+                var getdays = setmoment.toNow(true);
+                var setseconds = getseconds.split(" ").pop();
+                var setminutes = getminutes.split(" ").pop();
+                var sethours = gethours.split(" ").pop();
+                var setdays = getdays.split(" ").pop();
+            }
+        }else{
+            var setdays = "days";
+            var sethours = "hours";
+            var setminutes = "minutes";
+            var setseconds = "seconds";
+        }
+
+        var x = setInterval(function() { 
+            let end = new Date(toValidDate(res));
+            let start = new Date();
+            var remaintime = end - start;
+            var days = Math.floor(remaintime / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((remaintime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((remaintime % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((remaintime % (1000 * 60)) / 1000);
+            var realtimeleft = days +" "+ setdays +" "+ hours +" " + sethours +" "+ minutes +" "+ setminutes +" "+ seconds +" " + setseconds + " ";
+            if(seconds < 0 && customtext == ''){
+                realtimeleft = "0 "+setdays+" 0 "+sethours+" 0 "+setminutes+" 0 "+setseconds;
+            }else if(seconds < 0 && customtext != ''){
+                newvalue = customtext;
+            }else{
+                newvalue = newvalue.replace(" |"+customtext , "");
+            }
+            if(getlang[1] == 'custom'){
+                realtimeleft='';
+                if(setdays != ''){
+                realtimeleft = days +""+ setdays+ " ";
+                }
+                if(sethours != ''){
+                realtimeleft = realtimeleft + hours +"" + sethours +" ";
+                }
+                if(setminutes != ''){
+                realtimeleft = realtimeleft + minutes +""+ setminutes +" ";
+                }
+                if(setseconds != ''){
+                realtimeleft = realtimeleft + seconds +"" + setseconds + " ";
+                }
+            }
+            smarthText2[count].innerHTML = newvalue.replace(endres,realtimeleft);
+            smarthText2[count].classList.remove("smart-counter");
+            if (remaintime < 0) { 
+                clearInterval(x); 
+            } 
+        }, 1000);
+    }
+
+    function myTimersub(newvalue,count) {
+
+        var smarthText2 = document.getElementsByClassName('smarthSubTitle');
+        var againvalue = newvalue;
+        var pos3 = newvalue.indexOf("[[ CountdownTimer:");
+        var pos4 = newvalue.indexOf("M,");
+        if(pos4 < 0){
+            pos4 = newvalue.indexOf(" ]]");
+            var res = newvalue.slice(pos3+18, pos4);
+        }else{
+            var res = newvalue.slice(pos3+18, pos4+1);
+        }
+        var pos5 = newvalue.indexOf(" ]]");
+        var pos6 = newvalue.indexOf("|");
+        var endres = againvalue.slice(pos3+18, pos5);
+        if(pos6 < 0){
+            var customtext = '';
+        }else{
+            var customtext = againvalue.slice(pos6+1, pos5);
+        }
+        newvalue = newvalue.replace("[[ CountdownTimer:", "" );
+        newvalue = newvalue.replace(" ]]", "" );
+        endres = endres.replace(" |"+customtext , "" );
+        var getlang = endres.split(",");
+        var setlang2 = 'en';
+        if(getlang.length > 1){
+            if(getlang[1] == 'custom'){
+                if (getlang[2] == null){
+                    var setdays = '';
+                }else{
+                    var setdays = getlang[2];
+                }
+                if (getlang[3] == null){
+                    var sethours = '';
+                }else{
+                    var sethours = getlang[3];
+                }
+                if (getlang[4] == null){
+                    var setminutes = '';
+                }else{
+                    var setminutes = getlang[4];
+                }
+                if (getlang[5] == null){
+                    var setseconds = '';
+                }else{
+                    var setseconds = getlang[5];
+                }
+            }else{
+                setlang2 = getlang[1];
+                var setmoment = moment();
+                setmoment.locale(setlang2);
+                setmoment.subtract({hours: 0, minutes: 0, seconds: 35});
+                var getseconds = setmoment.toNow(true);
+                setmoment.subtract({hours: 0, minutes: 10, seconds: 59});
+                var getminutes = setmoment.toNow(true);
+                setmoment.subtract({hours: 5, minutes: 59, seconds: 59});
+                var gethours = setmoment.toNow(true);
+                setmoment.subtract({hours: 222, minutes: 59, seconds: 59});
+                var getdays = setmoment.toNow(true);
+                var setseconds = getseconds.split(" ").pop();
+                var setminutes = getminutes.split(" ").pop();
+                var sethours = gethours.split(" ").pop();
+                var setdays = getdays.split(" ").pop();
+            }
+        }else{
+            var setdays = "days";
+            var sethours = "hours";
+            var setminutes = "minutes";
+            var setseconds = "seconds";
+        }
+
+        var x = setInterval(function() { 
+            let end = new Date(toValidDate(res));
+            let start = new Date();
+            var remaintime = end - start;
+            var days = Math.floor(remaintime / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((remaintime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((remaintime % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((remaintime % (1000 * 60)) / 1000);
+            var realtimeleft = days +" "+ setdays +" "+ hours +" " + sethours +" "+ minutes +" "+ setminutes +" "+ seconds +" " + setseconds + " ";
+            if(seconds < 0 && customtext == ''){
+                realtimeleft = "0 "+setdays+" 0 "+sethours+" 0 "+setminutes+" 0 "+setseconds;
+            }else if(seconds < 0 && customtext != ''){
+                newvalue = customtext;
+            }else{
+                newvalue = newvalue.replace(" |"+customtext , "");
+            }
+            if(getlang[1] == 'custom'){
+                realtimeleft='';
+                if(setdays != ''){
+                realtimeleft = days +""+ setdays+ " ";
+                }
+                if(sethours != ''){
+                realtimeleft = realtimeleft + hours +"" + sethours +" ";
+                }
+                if(setminutes != ''){
+                realtimeleft = realtimeleft + minutes +""+ setminutes +" ";
+                }
+                if(setseconds != ''){
+                realtimeleft = realtimeleft + seconds +"" + setseconds + " ";
+                }
+            }
+            smarthText2[count].innerHTML = newvalue.replace(endres,realtimeleft);
+            smarthText2[count].classList.remove("smart-counter");
+            if (remaintime < 0) { 
+                clearInterval(x); 
+            } 
+        }, 1000); 
+
+    }
+    
+    function smarthonload() {
+
+        screensizesmarthFunction();
+        var mypage = '{{template}}';
+        var myproductid = '{{product.id}}';
+        setTimeout(function(){ 
+            smarthsetlivevisit(mypage,myproductid,'smarthloop');
+            smarthsetlivevisit(mypage,myproductid,'smarthsubtitleloop');
+        }, 500); 
+
+        var smarthsku = '{{ProductSKU}}';
+        var skuclass = document.getElementsByClassName('smarthsku');
+        if(smarthsku == 0){
+            for (var i = 0; i < skuclass.length; i++) {
+                if(skuclass[i].dataset.sku == 0){
+                    var parentsku = skuclass[i].parentElement;
+                    var parent2sku = parentsku.parentElement;
+                    parent2sku.style.cssText = 'display:none !important';
+                }
+            }
+        }
+
+        // setTimeout(function(){ 
+            var smart2hText = document.getElementsByClassName('smarthTitle');
+            if(smart2hText[0]){
+                for (var i = 0; i < smart2hText.length; i++) {
+                    var value = smart2hText[i].innerHTML;
+                    if( value.indexOf("[[today") != -1  ){
+                        expdeliveryhdatesmart(value,i);
+                    }
+                }
+            }
+
+            var smart2hsubText = document.getElementsByClassName('smarthSubTitle');
+            if(smart2hsubText[0]){
+                for (var i = 0; i < smart2hsubText.length; i++) {
+                    var value = smart2hsubText[i].innerHTML;
+                    if( value.indexOf("[[today") != -1  ){
+                        expdeliveryhsubdatesmart(value,i);
+                    }
+                }
+            }
+
+            var smarthText = document.getElementsByClassName('smarthTitle');
+            if(smarthText[0]){
+                for (var i = 0; i < smarthText.length; i++) {
+                    var value = smarthText[i].innerHTML;
+                    if( value.indexOf("CountdownTimer:") != -1  ){
+                        myTimer(value,i);
+                    }
+                }
+            }
+
+            var smarthsubText = document.getElementsByClassName('smarthSubTitle');
+            if(smarthsubText[0]){
+                for (var i = 0; i < smarthsubText.length; i++) {
+                    var value = smarthsubText[i].innerHTML;
+                    if( value.indexOf("CountdownTimer:") != -1  ){
+                        myTimersub(value,i);
+                    }
+                }
+            }
+
+            var getpage = '{{request.page_type}}';
+            var smarthText2 = document.getElementsByClassName('smarthText smarthVariantInventory');
+            if(smarthText2[0]){
+                if(getpage == 'collection'){
+                    for (var i = 0; i < smarthText2.length; i++) {
+                        var oldloop = smarthText2[i].parentElement;
+                        var newloop = oldloop.parentElement;
+                        newloop.remove();
+                    }
+                }
+            } 
+        // }, 1000);
+
+        document.getElementById("smart-modal-close").onclick = function() {mymodalsmarth()};
+        window.onclick = function(event) {
+            if (event.target.classList[1] == 'smart-modal-open') {
+                mymodalsmarth();
+            }
+        }
+
+        removesmarthighlight();
+
+        setTimeout(function(){ 
+            var smartinstances = tippy('[data-tippy-content]');
+        }, 500);
+
+
+        if(countrysmarth == 'smarthighlightcountry'){
+            countrysmarth = 'newsmarthighlightcountry';
+            var countrycount = document.getElementsByClassName('smarthCountry');
+            if (thaliacustomercountry == '') {
+            thaliaCustomerCookie();
+            thaliacustomercountry = thaliaGetCookie("thaliacustomercountry");
+            var mycountrysmarth = thaliacustomercountry;
+            } else {
+            var mycountrysmarth = thaliacustomercountry;
+            }
+            if (countrycount.length > 0) {
+               
+
+                        var countryclassSmarth = document.getElementsByClassName('smarthCountry');
+                        for (var i = 0; i < countryclassSmarth.length; i++) {
+                            var counrtylisth = countryclassSmarth[i].getAttribute('data-countryselectedh');
+                            var position = counrtylisth.search(mycountrysmarth);
+                            smarthcountryName = mycountrysmarth;
+                            if(position < 0){ 
+                                countryclassSmarth[i].style.cssText = 'display:none !important';
+                                countryclassSmarth[i].classList.add("removeme");
+                            }else{
+                                countryclassSmarth[i].style.display= 'block';
+                                countryclassSmarth[i].setAttribute('countryrule', '1');
+                                if (countryclassSmarth[i].classList.contains('smarthScreenSize')) {
+                                var screenlist = countryclassSmarth[i].getAttribute('data-screensizeselectedh');
+                                var screensizeArray = screenlist.split(",");
+                                var smdevice = window.matchMedia( "screen and (max-width: 767.98px)" );
+                                var mddevice = window.matchMedia( "screen and (min-width: 768px) and (max-width: 991.98px)" );
+                                var lgdevice = window.matchMedia( "screen and (min-width: 992px) and (max-width: 1199.98px)" );
+                                var xldevice = window.matchMedia( "(min-width: 1200px)" );
+
+                                if (smdevice.matches ){
+                                    if(screensizeArray[0] == '1'){
+                                    }else{
+                                    countryclassSmarth[i].style.setProperty("display", "none", "important");
+                                    }
+                                }else if( mddevice.matches){
+                                    if(screensizeArray[1] == '1'){
+                                    }else{
+                                    countryclassSmarth[i].style.setProperty("display", "none", "important");
+                                    }
+                                }else if(lgdevice.matches){
+                                    if(screensizeArray[2] == '1'){
+                                    }else{
+                                    countryclassSmarth[i].style.setProperty("display", "none", "important");
+                                    }
+                                }else{
+                                    if(screensizeArray[3] == '1'){
+                                    }else{
+                                    countryclassSmarth[i].style.setProperty("display", "none", "important");
+                                    }
+                                }
+
+                                }
+                                
+                            }
+                        }
+                        var removeclass = document.getElementsByClassName('removeme');
+                        for (var i = 0; i < removeclass.length; i++) {
+                            removeclass[i].remove();
+                        }
+
+                        removesmarthighlight();
+
+                    }
+                };
+               
+
+    }
+
+    window.addEventListener('resize', screensizesmarthFunction);
+
+    function screensizesmarthFunction() { 
+      var screensizeclass = document.getElementsByClassName('smarthScreenSize');
+      for (var i = 0; i < screensizeclass.length; i++) {
+        var issetcountryrule = screensizeclass[i].getAttribute('countryrule');
+        if( issetcountryrule == '1'){
+          var screenlist = screensizeclass[i].getAttribute('data-screensizeselectedh');
+          var screensizeArray = screenlist.split(",");
+          
+          var smdevice = window.matchMedia( "screen and (max-width: 767.98px)" );
+          var mddevice = window.matchMedia( "screen and (min-width: 768px) and (max-width: 991.98px)" );
+          var lgdevice = window.matchMedia( "screen and (min-width: 992px) and (max-width: 1199.98px)" );
+          var xldevice = window.matchMedia( "(min-width: 1200px)" );
+
+          if (smdevice.matches ){
+            if(screensizeArray[0] == '1'){
+                screensizeclass[i].style.display= 'block';
+            }else{
+                screensizeclass[i].style.setProperty("display", "none", "important");
+            }
+          }else if( mddevice.matches){
+            if(screensizeArray[1] == '1'){
+                screensizeclass[i].style.display= 'block';
+            }else{
+                screensizeclass[i].style.setProperty("display", "none", "important");
+            }
+          }else if(lgdevice.matches){
+            if(screensizeArray[2] == '1'){
+                screensizeclass[i].style.display= 'block';
+            }else{
+                screensizeclass[i].style.setProperty("display", "none", "important");
+            }
+          }else{
+            if(screensizeArray[3] == '1'){
+                screensizeclass[i].style.display= 'block';
+            }else{
+                screensizeclass[i].style.setProperty("display", "none", "important");
+            }
+          }
+
+        }
+      }
+
+    }
+
+    function setCookiesmarth(cname, cvalue, exdays) {
+      var d = new Date();
+      var time = setcookietimestamphsmart(exdays);
+      if(exdays < 5){
+        d.setTime(d.getTime() + (time * 60 * 1000));
+      }else if(exdays > 4 && exdays < 8){
+        d.setTime(d.getTime() + (time * 60 * 60 * 1000));
+      }else if(exdays > 7){
+        d.setTime(d.getTime() + (time * 24 * 60 * 60 * 1000));
+      }
+      
+      var expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookiesmarth(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function setcookietimestamphsmart(time) {
+        var realtime='';
+        if(time==1){
+            realtime=1;
+        }else if(time==2){
+            realtime=5;
+        }else if(time==3){
+            realtime=10;
+        }else if(time==4){
+            realtime=30;
+        }else if(time==5){
+            realtime=1;
+        }else if(time==6){
+            realtime=6;
+        }else if(time==7){
+            realtime=12;
+        }else if(time==8){
+            realtime=1;
+        }else if(time==9){
+            realtime=7;
+        }else if(time==10){
+            realtime=15;
+        }else if(time==11){
+            realtime=30;
+        }
+        return realtime;
+    }
+
+</script>

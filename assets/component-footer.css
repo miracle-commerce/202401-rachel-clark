@@ -1,0 +1,30 @@
+.footer__item-newsletter {
+    margin-top: 1.5rem;
+}
+.footer__item.footer__item--links {
+    max-width: 375px;
+}
+.footer__item-content .linklist.two-columns {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 20px;
+}
+.linklist.two-columns .linklist__item:not(:last-child) {
+    padding-top: 0;
+    padding-bottom: 12px;
+}
+@media screen and (min-width: 1000px) {
+    .footer__item-content .linklist.two-columns {
+        column-gap: 30px;
+    }
+    .linklist.two-columns .linklist__item:not(:last-child) {
+        padding-top: 0;
+        padding-bottom: 6px;
+    }
+}
+@media screen and (max-width: 740px) {
+    .footer__item {
+        grid-column: span 2;
+    }
+}

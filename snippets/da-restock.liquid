@@ -1,0 +1,119 @@
+{% assign alwaysShow = shop.metafields.da-restock.alwaysShow %}
+{% assign displayForm = product.metafields.da-restock.hide %}
+{% assign preorder = shop.metafields.da-restock.preorder %}
+
+{% assign prefillEmail = "" %}
+{% if shop.metafields.da-restock.prefillEmail == "true" and customer.email %}
+    {% assign prefillEmail  = customer.email %}
+{% endif %}
+<script type="text/javascript">
+    const da_variant = {{ product.selected_or_first_available_variant.id }};
+</script>
+
+{% comment %} Do not show form for ignored collections {% endcomment %}
+{% for collection in product.collections %}
+    {% if collection.metafields.da-restock.forbidden == 'true' %}
+        {% assign displayForm = 'false' %}
+    {% endif %}
+{% endfor %}
+
+{% if alwaysShow == "true" and displayForm != "false" %}
+    {% assign show = false %}
+    {% assign multipleVariants = false %}
+    {% if product.variants.size > 1 %}
+        {% assign multipleVariants = true %}
+    {% endif %}
+    {% for variant in product.variants %}
+        {% if preorder == 'true' %}
+            {% unless variant.inventory_quantity > 0 %}
+                {% assign show = true %}
+            {% endunless %}
+        {% else %}
+            {% unless variant.available %}
+                {% assign show = true %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
+    {% if show %}
+        <div class="dd-restock-notification-container-v2" id="dd-restock-notification-container">
+            <div id="dd-restock-notification-msg">
+                <div id="dd-restock-notification-msg-success" style="display: none">{{ shop.metafields.da-restock.success }}</div>
+                <div id="dd-restock-notification-msg-error" style="display: none">{{ shop.metafields.da-restock.error }}</div>
+            </div>
+            <div class="da-restock-notification da-restock-alwaysShow">
+                <div class="da-restock-notification-form">
+                    <p>{{ shop.metafields.da-restock.productText }}</p>
+
+                    {% if multipleVariants %}
+                        <select name="variant">
+                            {% for variant in product.variants %}
+                                {% if preorder == 'true' %}
+                                    {% unless variant.inventory_quantity > 0 %}
+                                        <option value="{{ variant.id }}">{{ variant.title }}
+                                        </option>
+                                    {% endunless %}
+                                {% else %}
+                                    {% unless variant.available %}
+                                        <option value="{{ variant.id }}">{{ variant.title }}
+                                        </option>
+                                    {% endunless %}
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    {% else %}
+                        <input type="hidden" name="davariant" value="{{ product.variants[0].id }}"/>
+                    {% endif %}
+                    <input type="text" placeholder="{{ shop.metafields.da-restock.productInput | escape }}" name="email" value="{{prefillEmail}}"/>
+                    <input type="hidden" name="store" value="{{ shop.permanent_domain }}"/>
+                    <input type="hidden" name="product" value="{{ product.id }}"/>
+                    <input type="hidden" name="url" value="{{ product.url }}"/>
+                    <div class="btn da-restock-notification-button">{{ shop.metafields.da-restock.productButton }}</div>
+                        {% if shop.metafields.da-restock.marketingCheckboxText %}
+                      	    <div class="da-restock-checkbox-group">
+                                <label for="da-restock-variant-{{variant.id}}-acceptsMarketing">
+                                    <input id="da-restock-variant-{{variant.id}}-acceptsMarketing" type="checkbox" value="acceptsMarketing" name="daAcceptsMarketing" checked>{{shop.metafields.da-restock.marketingCheckboxText}}
+                                </label>
+		                    </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+    {% endif %}
+{% elsif displayForm != "false" %}
+    <div class="dd-restock-notification-container-v2" id="dd-restock-notification-container">
+        <div id="dd-restock-notification-msg">
+            <div id="dd-restock-notification-msg-success" style="display: none">{{ shop.metafields.da-restock.success }}</div>
+            <div id="dd-restock-notification-msg-error" style="display: none">{{ shop.metafields.da-restock.error }}</div>
+        </div>
+        {% for variant in product.variants %}
+            {% assign variantAvailable = variant.available %}
+            {% if preorder == 'true' %}
+                {% if variant.inventory_quantity > 0 %}
+                    {% assign variantAvailable = true %}
+                {% else %}
+                    {% assign variantAvailable = false %}
+                {%endif %}
+            {% endif %}
+            {% unless variantAvailable %}
+                <div class="da-restock-notification" id="da-restock-notification-variant-{{ variant.id }}" style="display:none">
+                    <div class="da-restock-notification-form">
+                        <p>{{ shop.metafields.da-restock.productText }}</p>
+                        <input type="text" placeholder="{{ shop.metafields.da-restock.productInput | escape }}" name="email" value="{{prefillEmail}}"/>
+                        <input type="hidden" name="store" value="{{ shop.permanent_domain }}"/>
+                        <input type="hidden" name="product" value="{{ product.id }}"/>
+                        <input type="hidden" name="url" value="{{ product.url }}"/>
+                        <input type="hidden" id="da-restock-variant" name="davariant" value="{{ variant.id }}"/>
+                        <div class="btn da-restock-notification-button">{{ shop.metafields.da-restock.productButton }}</div>
+                        {% if shop.metafields.da-restock.marketingCheckboxText %}
+                      	    <div class="da-restock-checkbox-group">
+                                <label for="da-restock-variant-{{variant.id}}-acceptsMarketing">
+                                    <input id="da-restock-variant-{{variant.id}}-acceptsMarketing" type="checkbox" value="acceptsMarketing" name="daAcceptsMarketing" checked>{{shop.metafields.da-restock.marketingCheckboxText}}
+                                </label>
+		                    </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endunless %}
+        {% endfor %}
+    </div>
+{% endif %}

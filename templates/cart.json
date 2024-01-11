@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "blocks": {
+        "totals": {
+          "type": "totals",
+          "settings": {
+          }
+        },
+        "order_note": {
+          "type": "order_note",
+          "settings": {
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "totals",
+        "order_note"
+      ],
+      "settings": {
+        "show_payment_methods": true,
+        "show_shipping_estimator": true,
+        "shipping_estimator_default_country": "United States",
+        "empty_button_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "cart-recommendations": {
+      "type": "cart-recommendations",
+      "settings": {
+        "title": "You may also like"
+      }
+    },
+    "cross-sell": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "Your subheading",
+        "title": "Your title",
+        "liquid": "<p style=\"text-align: center\">Write or copy\/paste Liquid code<\/p>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cart-recommendations",
+    "cross-sell"
+  ]
+}

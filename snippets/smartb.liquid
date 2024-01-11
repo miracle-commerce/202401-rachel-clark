@@ -1,0 +1,167 @@
+{% assign HideAssets = hideAssets | default: 0 %}{% if HideAssets != '1' %}{% render 'smart-css' %}{% endif %}
+		{% assign smartbMobileSize = smartbMobileSize | default: 100 %}
+			{% assign smartbTabletSize = smartbTabletSize | default: 100 %}
+			{% assign smartbProduct = product %}
+			{% assign smartbCustId = customer.id %}
+			{% assign smartbGiftCard = product.gift_card? %}
+			{% assign smartbVarient = product.variants.size %}
+			{%- assign smartbmoneyformat = shop.money_format | split: "{{" | last | remove: "}}" | strip | strip_html -%}
+			{% if smartbmoneyformat == "amount_with_comma_separator" or smartbmoneyformat == "amount_no_decimals_with_comma_separator" %}
+				{% assign smartbProdPrice = product.price | money_without_currency | remove: "." | replace: ",", "." %}
+				{% assign smartbProdPriceCompare = product.compare_at_price | money_without_currency | remove: "." | replace: ",", "." | default: 0 %}
+			{% else %} 
+				{% assign smartbProdPrice = product.price | money_without_currency | remove: "," %}
+				{% assign smartbProdPriceCompare = product.compare_at_price | money_without_currency | remove: "," | default: 0 %}
+			{% endif %}
+			{% assign smartbProdPrice = product.price | divided_by: 100.00 %}
+			{% assign smartbCustomerTag = customer.tags | downcase %}
+			{% assign smartbCompanyName = customer.current_company.name | downcase %}
+			{% assign smartbPublishedDate = product.published_at | date: "%s" %}
+			{% assign smartbPublishDateDiff = "now" | date: "%s" | minus: smartbPublishedDate %}
+			{% assign smartbTemplate = smartPageType | default: template | downcase %}
+			{% assign smartbLanguage = request.locale.iso_code | downcase %}
+			{% assign smartmetafield = smartbProduct.metafields %}
+			{% assign smartbProductTitle = smartbProduct.title | downcase %}
+			{% assign smartbProductType = smartbProduct.type | downcase %}
+			{% assign smartbProductVendor = smartbProduct.vendor | downcase %}
+			{% assign smartbShopifyTags = smartbProduct.tags | downcase %}
+			{% assign smartbProductWeight = product.variants.first.weight %}
+			{% assign smartbUTC = "now" | date: "%s" %}
+			{% assign smartbstartTime = "633891600"  %}
+			{% assign smartbEndTime = "2053962000"  %}
+			{% assign smartbMaxDisplayBadge = smartbMaxDisplayBadge | default: 10 %}	
+			{% assign smartbCreatedDateSec = smartbProduct.created_at | date: "%s" %}
+			{% assign smartbDateDiff = "now" | date: "%s" | minus: smartbCreatedDateSec %}
+			{% assign smartbCollectionIds = smartbProduct.collections | map: "id" | default: 0  %}				
+			{% assign smartbBadgeCounter = 1 %}
+			{% assign VariantCount = product.variants.size %}
+			{% assign SaleAmount    = 0 %}	
+			{% assign SalePercent   = 0 %}
+			{% assign CustomerOrderCount = customer.orders_count | default: 0 %}
+			{% assign CustomerTotalSpent = customer.total_spent | divided_by: 100.00  | default: 0 %}
+			{% assign ProductSKU = product.selected_or_first_available_variant.sku | downcase | default: 0 %}
+			{% assign VariantSKU = product.selected_or_first_available_variant.sku | downcase | default: 0 %}
+			{% assign VariantSelectedOption = product.selected_or_first_available_variant.title | downcase | default: 0 %}
+			{% assign smartGroup = smartbGroup | default: "1" %}
+			{% if smartbProduct.price and smartbProduct.compare_at_price %}
+				{% assign SaleAmount = smartbProduct.compare_at_price | minus: smartbProduct.price %}	
+				{% if SaleAmount > 0 %}
+					{% if smartbmoneyformat == "amount_with_comma_separator" or smartbmoneyformat == "amount_no_decimals_with_comma_separator" or  smartbmoneyformat contains "amount_with_comma_separator" %}
+						{% assign SalePercent = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | money_without_currency | replace: ",", "." | times: 100 | remove: ".0" | plus: 0 %}
+					{% elsif smartbmoneyformat contains "amount_no_decimals" %} 
+						{% assign divisor = product.compare_at_price  | times: 1.0 %}
+						{% assign SalePercent = product.compare_at_price | minus: product.price | divided_by: divisor  | times: 100.0 | round %}
+					{% else %} 
+						{% assign SalePercent = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | money_without_currency | times: 100 | remove: ".0" | plus: 0 %}
+					{% endif %}
+				{% endif %}
+        	{% endif %}
+			{% assign Inventory = 0 %}
+			{% assign Inventory2 = 0 %}
+			{% assign SmartbVariantInventory = 0 %}
+			{% assign SmartbVariantInventoryPolicy = "any" %}
+			{% if passvariantsmart.id %} 
+				{% assign SmartbVariantInventory = passvariantsmart.inventory_quantity %}	
+				{% assign SmartbVariantInventoryPolicy = passvariantsmart.inventory_policy %}
+				{% assign VariantSKU = passvariantsmart.sku | downcase %}
+				{% assign VariantSelectedOption = passvariantsmart.title | downcase %}
+				{% assign VariantMetafield=passvariantsmart.metafields %}
+			{% endif %}
+			{% assign SaleAmountVar  = 0 %}	
+			{% assign SalePercentVar = 0 %}
+			{% assign SalePercentMin = 0 %}
+			{% assign SalePercentMax = 0 %}
+			{% assign VariantSaleAmount = SaleAmountVar %}	
+			{% assign VariantSalePercent = SalePercentVar %}
+        	{% for productVariant in smartbProduct.variants %}
+				{% assign Inventory2 = productVariant.inventory_quantity | at_least: 0 %}
+				{% assign Inventory = Inventory | plus: Inventory2 %}
+				{% if productVariant.price and productVariant.compare_at_price %}
+					{% assign SaleAmountVar = productVariant.compare_at_price | minus: productVariant.price %}	
+					{% if SaleAmountVar > 0 %}
+						{% if smartbmoneyformat == "amount_with_comma_separator" or smartbmoneyformat == "amount_no_decimals_with_comma_separator" or  smartbmoneyformat contains "amount_with_comma_separator" %}
+							{% assign SalePercentVar = productVariant.compare_at_price | minus: productVariant.price | times: 100.0 | divided_by: productVariant.compare_at_price | money_without_currency | replace: ",", "." | times: 100 | remove: ".0" | plus: 0 %}
+						{% elsif smartbmoneyformat contains "amount_no_decimals" %} 
+							{% assign divisor = productVariant.compare_at_price  | times: 1.0 %}
+							{% assign SalePercentVar = productVariant.compare_at_price | minus: productVariant.price | divided_by: divisor  | times: 100.0 | round %}
+						{% else %} 
+							{% assign SalePercentVar = productVariant.compare_at_price | minus: productVariant.price | times: 100.0 | divided_by: productVariant.compare_at_price | money_without_currency | times: 100 | remove: ".0" | plus: 0 %}
+						{% endif %}
+						{% if SalePercentMin == 0 or SalePercentMin > SalePercentVar %}
+							{% assign SalePercentMin = SalePercentVar %}
+						{% endif %}
+						{% if SalePercentMax == 0 or SalePercentMax < SalePercentVar %}
+							{% assign SalePercentMax = SalePercentVar %}
+						{% endif %}
+						{% if passvariantsmart.id %} 
+							{% if passvariantsmart.id == productVariant.id %} 
+								{% assign VariantSaleAmount = SaleAmountVar %}	
+								{% assign VariantSalePercent = SalePercentVar %}
+							{% endif %}
+						{% endif %}
+					{% endif %}
+				{% endif %}			
+			{% endfor %}<div class="smartBadges outersmartb{{product.id}}-{{smartGroup}} {{smartbOuterClass}} smart-d-block" style="{{ smartbOuterStyle }}" data-smartproductsid="{{product.id}}" data-smartbOuterClass="{{smartbOuterClass}}" data-smartbOuterStyle="{{smartbOuterStyle}}" data-smartbInnerClass="{{smartbInnerClass}}" data-smartbInnerStyle="{{smartbInnerStyle}}" data-smartbGroup="{{smartGroup}}" >	
+  	{% comment %} Start Badge: 1 {% endcomment %}
+  	{% if smartbBadgeCounter <= smartbMaxDisplayBadge %}
+  	 {% assign isStartbShowBadge = false %} {% assign smartbProductCollections = "155978596437,274294898773,156125036629,260667801685,166133432405,151992205397,168378564693,264249933909,260667834453,161932968021,273704910933,264831598677" | split: "," %}{% assign issmartbProductCollectionFound0 = false %}
+						{% for collectionid in smartbProductCollections %}
+							{% assign collectionid2 = collectionid | plus: 0 %}
+							{% for shopifyrealcollection in smartbCollectionIds %}
+								{% if shopifyrealcollection == collectionid2 %}
+									{% assign issmartbProductCollectionFound0 = true %}
+									{% break %}
+								{% endif %}
+							{% endfor %}
+						{% endfor %}{% assign newstringvendor0 = "Southern Charm Trading Co." | downcase %}{% assign newstringvendor1 = "Anemone" | downcase %}{% assign newstringproducttitle0 = "Bodysuit" | downcase %} {% assign smartbProductTags = "BF2023,bfholly,stockingbar23" | split: "," %}{% assign issmartbProductTagFound0 = false %}
+						{% for tagName in smartbProductTags %}
+							{% assign smartbProductTagname = tagName | downcase %}
+							{% for shopifyrealtag in product.tags %}
+								{% assign smartbProductTagshopify = shopifyrealtag | downcase %}
+								{% if smartbProductTagshopify == smartbProductTagname %}
+									{% assign issmartbProductTagFound0 = true %}
+									{% break %}
+								{% endif %}
+							{% endfor %}
+						{% endfor %}{% if product.metafields.smart.myordercount != blank %}
+						{% if product.metafields.smart.myordercount.value.ordercount %}
+							{% assign OrderCount = product.metafields.smart.myordercount.value.ordercount | default: 0 %}
+							{% assign RecentSoldCount = product.metafields.smart.myordercount.value.recentcount | default: 0 %}
+						{% else%}
+							{% assign OrderCount = product.metafields.smart.myordercount.ordercount | default: 0 %}
+							{% assign RecentSoldCount = product.metafields.smart.myordercount.recentcount | default: 0 %}
+						{% endif %}
+					{% else  %} 
+						{% assign OrderCount = product.metafields.smart.ordercount | default: 0 %}
+						{% assign RecentSoldCount = product.metafields.smart.recentcount | default: 0 %}
+					{% endif %}{% if  true == issmartbProductCollectionFound0  or  true == issmartbProductTagFound0  or smartbProductVendor == newstringvendor0 or smartbProductVendor == newstringvendor1 or  smartbProductTitle contains newstringproducttitle0 %}{% assign isStartbShowBadge = true %}{% endif %}{% assign smartbUTC 		= "now" | date: "%s" %}
+			{% assign smartbUTC 		= smartbUTC | plus: 0 %}
+			{% assign smartbStartTime = 633891600  %}
+			{% assign smartbEndTime = 2053962000  %}
+			{% if smartbStartTime <= smartbUTC and smartbEndTime >= smartbUTC %}{% if isStartbShowBadge == true %} 
+				{% assign smartbadgeGroup = '1' %} 
+				{% if smartGroup == smartbadgeGroup %}
+				{% assign smartbBadgeCounter = smartbBadgeCounter | plus: 1 %}{% assign lastbstring = '' %}{% assign getlastbstring = '⚠️ This item is Final Sale and not eligible for Return or Exchange.' %}{% if getlastbstring contains ' VariantSalePercent | round ' and  VariantSalePercent == 0 %}
+{% else %}
+<div class="smartbDesktop {{smartbInnerClass}} smartb-2378   smartbScreenSize  "  data-countryselected= '' data-screensizeselected= '1,1,1,1'  countryrule=1 visitorcountryrule=0 onclick="smartredirectLink('','2','2378','0');" style="{{ smartbInnerStyle }}cursor:pointer;   ">
+
+    <div style="box-sizing: border-box; color: rgb(12, 52, 91); font-size: 14px; position: relative; max-width: 100%; padding: 0.25em 0.5em; background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)); opacity: 1;">        
+        <div  class="badgetitle smartbText smart-font-adjust " data-smartproductid='{{product.id}}' data-defaultsize= '14px' data-mobilesize= '0' data-tabletsize= '0' style="white-space: normal; overflow: hidden; text-align: center; font-family: ABeeZee;">
+            {% if lastbstring == '' %}
+                ⚠️ This item is Final Sale and not eligible for Return or Exchange.
+            {% else %}
+                {{lastbstring}}
+            {% endif %}      
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endif %}{% endif %}{% endif %}	{% endif %}
+	{% comment %} End Badge: 1 {% endcomment %}	
+
+
+
+    </div>
+		
+	{% if HideAssets != '1' %}{% render 'smartb-js' %}{% endif %}
+		

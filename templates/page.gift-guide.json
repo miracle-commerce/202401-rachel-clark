@@ -1,0 +1,312 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "b9b4813e-0816-494c-8a9b-8f8755c0f4e8": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__b9b4813e-0816-494c-8a9b-8f8755c0f4e8-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "brotique",
+            "label": "The Bro-tique",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__b9b4813e-0816-494c-8a9b-8f8755c0f4e8-1675059283985156d6-0"
+      ],
+      "settings": {
+        "subheading": "The Bro-tique",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "094adc3b-2d98-4022-ae6a-4052108af498": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__094adc3b-2d98-4022-ae6a-4052108af498-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "drinkware",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__094adc3b-2d98-4022-ae6a-4052108af498-1675059283985156d6-0"
+      ],
+      "settings": {
+        "subheading": "Drinkware",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "4f7b6e33-0528-40d6-90a9-f40eb1c00db0": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__4f7b6e33-0528-40d6-90a9-f40eb1c00db0-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "candles",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__4f7b6e33-0528-40d6-90a9-f40eb1c00db0-1675059283985156d6-0"
+      ],
+      "settings": {
+        "subheading": "Candles",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "7f5ecbce-8fe8-4f0c-b869-3167505744b8": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__7f5ecbce-8fe8-4f0c-b869-3167505744b8-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "earrings",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "a1e894a0-e7dc-4b98-94c7-afbe7256be4d": {
+          "type": "collection",
+          "settings": {
+            "collection": "bracelets",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "bf23d513-cd1d-49a2-98cb-f7c92da1d282": {
+          "type": "collection",
+          "settings": {
+            "collection": "necklaces",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__7f5ecbce-8fe8-4f0c-b869-3167505744b8-1675059283985156d6-0",
+        "a1e894a0-e7dc-4b98-94c7-afbe7256be4d",
+        "bf23d513-cd1d-49a2-98cb-f7c92da1d282"
+      ],
+      "settings": {
+        "subheading": "Jewelry",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6928aab8-e4f5-4e8a-902b-0c26254d2186": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__6928aab8-e4f5-4e8a-902b-0c26254d2186-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "hats-gloves-scarves",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "9cc111a5-d2aa-4f80-90a5-8390ea981ec7": {
+          "type": "collection",
+          "settings": {
+            "collection": "baseball-caps",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__6928aab8-e4f5-4e8a-902b-0c26254d2186-1675059283985156d6-0",
+        "9cc111a5-d2aa-4f80-90a5-8390ea981ec7"
+      ],
+      "settings": {
+        "subheading": "Outerwear Accessories",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "9a9b0ec2-f8c9-442b-841d-c5d118aaaf71": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__9a9b0ec2-f8c9-442b-841d-c5d118aaaf71-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "purses-bags",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__9a9b0ec2-f8c9-442b-841d-c5d118aaaf71-1675059283985156d6-0"
+      ],
+      "settings": {
+        "subheading": "Purses + Bags",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "fb91b542-a266-4b30-8a27-3d1f7146315b": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__fb91b542-a266-4b30-8a27-3d1f7146315b-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "gift-card",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__fb91b542-a266-4b30-8a27-3d1f7146315b-1675059283985156d6-0"
+      ],
+      "settings": {
+        "subheading": "Gift Certificate",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "17cec684-36f8-470f-8bdb-ef087ce05d71": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14743679533141__17cec684-36f8-470f-8bdb-ef087ce05d71-1675059283985156d6-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "teacher",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "2a138b0a-5306-47b5-be09-33911bb3fe1c": {
+          "type": "collection",
+          "settings": {
+            "collection": "mom",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "9ec1f49a-f0a1-42a2-bac7-2da287bf8e8a": {
+          "type": "collection",
+          "settings": {
+            "collection": "gameday-collection",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14743679533141__17cec684-36f8-470f-8bdb-ef087ce05d71-1675059283985156d6-0",
+        "2a138b0a-5306-47b5-be09-33911bb3fe1c",
+        "9ec1f49a-f0a1-42a2-bac7-2da287bf8e8a"
+      ],
+      "settings": {
+        "subheading": "Shop By Category",
+        "title": "",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b9b4813e-0816-494c-8a9b-8f8755c0f4e8",
+    "094adc3b-2d98-4022-ae6a-4052108af498",
+    "4f7b6e33-0528-40d6-90a9-f40eb1c00db0",
+    "7f5ecbce-8fe8-4f0c-b869-3167505744b8",
+    "6928aab8-e4f5-4e8a-902b-0c26254d2186",
+    "9a9b0ec2-f8c9-442b-841d-c5d118aaaf71",
+    "fb91b542-a266-4b30-8a27-3d1f7146315b",
+    "17cec684-36f8-470f-8bdb-ef087ce05d71"
+  ]
+}

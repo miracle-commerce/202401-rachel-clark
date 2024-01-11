@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "discount-manager": {
+      "type": "discount-manager",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "discount-manager"
+  ]
+}

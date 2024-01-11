@@ -1,0 +1,10 @@
+.jdgm-carousel-wrapper {
+    padding: 0 !important;
+}
+.jdgm-carousel-wrapper.jdgm-hidden,
+.jdgm-carousel-wrapper .jdgm-hidden,
+.jdgm-widget.jdgm-hidden ,
+.jdgm-widget .jdgm-hidden {
+    visibility: visible !important;
+    display: block !important;
+}

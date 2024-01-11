@@ -1,0 +1,191 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "668e36dc-150e-4b40-bc98-f2538ef76255": {
+          "type": "shopify:\/\/apps\/sezzle-widget\/blocks\/widget-block\/f3a53793-e118-4764-a86b-a79bfedb0d5f",
+          "settings": {
+            "heading": "Sezzle Widget",
+            "font_size": 14,
+            "font_family": "inherit"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "variant_image",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "bfd2a505-ab0c-4cc6-892d-57681ea73269": {
+          "type": "inventory",
+          "settings": {
+            "low_inventory_threshold": 2
+          }
+        }
+      },
+      "block_order": [
+        "668e36dc-150e-4b40-bc98-f2538ef76255",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "bfd2a505-ab0c-4cc6-892d-57681ea73269"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": false,
+        "show_sticky_add_to_cart": true,
+        "show_share_buttons": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide"
+      }
+    },
+    "product-content": {
+      "type": "product-content",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "description"
+      ],
+      "settings": {
+      }
+    },
+    "judgeme_section_review_widget_10c2": {
+      "type": "apps",
+      "blocks": {
+        "judgeme_review_widget_8eb25634": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judgeme_review_widget_8eb25634"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "You may also like",
+        "recommendations_count": 4,
+        "products": [
+
+        ],
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "ec94ceda-a056-4e4c-809c-7ef1fd246e4f": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "Items Ending in .99¢ are Final Sale",
+        "content": "",
+        "button_text": "Return Policy",
+        "button_link": "shopify:\/\/pages\/returns",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "b1c01c4a-421b-4375-a9a4-c41bf6c225aa": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Free shipping & Return",
+            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
+          }
+        },
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon_width": 50,
+            "title": "Customer service",
+            "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
+          }
+        },
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon_width": 50,
+            "title": "Secure payment",
+            "content": "<p>Your payment information is processed securely.<\/p>"
+          }
+        },
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 50,
+            "title": "Contact us",
+            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-1",
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-2",
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-3",
+        "template--14736010313813__b1c01c4a-421b-4375-a9a4-c41bf6c225aa-item-4"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-content",
+    "judgeme_section_review_widget_10c2",
+    "product-recommendations",
+    "ec94ceda-a056-4e4c-809c-7ef1fd246e4f",
+    "b1c01c4a-421b-4375-a9a4-c41bf6c225aa"
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "ae3dfc8f-fb7b-41a7-834f-97d7b3d08c62": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_3797.png",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "shopify:\/\/collections\/year-end-sale",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "14dfef74-43f4-4a86-9910-48341fe4e26b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_5028.png",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "shopify:\/\/collections\/valentines-collection",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "ae3dfc8f-fb7b-41a7-834f-97d7b3d08c62",
+        "14dfef74-43f4-4a86-9910-48341fe4e26b"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "fade",
+        "autoplay": true,
+        "cycle_speed": 8,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "8b55cb0a-def0-4516-b28c-54ef07da41cd": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14736009953365__8b55cb0a-def0-4516-b28c-54ef07da41cd-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-this-week",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14736009953365__8b55cb0a-def0-4516-b28c-54ef07da41cd-collection-1"
+      ],
+      "settings": {
+        "subheading": "New Arrivals",
+        "title": "Explore the Latest Products!",
+        "content": "",
+        "products_count": 10,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals",
+            "label": "",
+            "button_text": "View All",
+            "button_url": "shopify:\/\/collections\/new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1"
+      ],
+      "settings": {
+        "subheading": "Featured Collection",
+        "title": "Wear What you love",
+        "content": "",
+        "products_count": 20,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6327bcb4-db53-446a-966b-5d719bc4872b": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14525763551317__6327bcb4-db53-446a-966b-5d719bc4872b-1672784682e6688765-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "shoes",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14525763551317__6327bcb4-db53-446a-966b-5d719bc4872b-1672784682e6688765-0"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "For Your Fancy Feet!",
+        "content": "",
+        "products_count": 10,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "16547858599386e3f7": {
+      "type": "featured-collections",
+      "blocks": {
+        "604b8d9d-6d7b-4a04-822f-7fd7b257f762": {
+          "type": "collection",
+          "settings": {
+            "collection": "gift-guide",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "604b8d9d-6d7b-4a04-822f-7fd7b257f762"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Shop for Gifts!",
+        "content": "",
+        "products_count": 10,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "2f8e6e47-d6a5-4c7b-8933-d62cbf2c74c3": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14736009953365__2f8e6e47-d6a5-4c7b-8933-d62cbf2c74c3-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_5047.jpg",
+            "tab_label": "Item",
+            "subheading": "Loyalty Rewards Program",
+            "title": "Style Stash Rewards!",
+            "content": "<p>We appreciate that you choose to shop with us regularly, and want to reward our loyal shoppers! Thank you for being a fabulous customer time and time again!<\/p>",
+            "button_text": "View Your rewards here",
+            "button_link": "https:\/\/shoprachelclark.com\/#smile-home"
+          }
+        }
+      },
+      "block_order": [
+        "template--14736009953365__2f8e6e47-d6a5-4c7b-8933-d62cbf2c74c3-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rachel-16.jpg",
+            "tab_label": "Text 1",
+            "subheading": "About Us",
+            "title": "Meet the Boutique!",
+            "content": "",
+            "button_text": "Read Our Story",
+            "button_link": "shopify:\/\/pages\/meet-the-boutique"
+          }
+        }
+      },
+      "block_order": [
+        "item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "#f5f1ec",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "blog": "news",
+        "subheading": "Stay up-to-date",
+        "title": "Blog posts",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-this-week",
+            "subheading": "",
+            "title": "New This Week!",
+            "link_text": "Shop Now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "tops",
+            "image": "shopify:\/\/shop_images\/unnamed_-_2023-02-14T141141.993.jpg",
+            "subheading": "",
+            "title": "Tops",
+            "link_text": "View All",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "bottoms",
+            "image": "shopify:\/\/shop_images\/B3BEE942-3376-4E87-B0CD-60FE00B6CE4E.jpg",
+            "subheading": "",
+            "title": "Bottoms!",
+            "link_text": "View All",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "1dc1c346-d890-491d-b237-f09d0f0d08f0": {
+          "type": "collection",
+          "settings": {
+            "collection": "valentines-collection",
+            "image": "shopify:\/\/shop_images\/savingPNG_6.jpg",
+            "subheading": "",
+            "title": "Love is in the Air!",
+            "link_text": "VIew All",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "b6a1d59d-21a4-479d-bac7-95f514264763": {
+          "type": "collection",
+          "settings": {
+            "collection": "purses-bags",
+            "subheading": "",
+            "title": "Purses + Bags",
+            "link_text": "View All",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "2a5de807-4011-4244-8644-e0a8fb3d200e": {
+          "type": "collection",
+          "settings": {
+            "collection": "brotique",
+            "subheading": "",
+            "title": "The Bro-tique",
+            "link_text": "View All",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "65bdf314-3322-455c-85c9-5bf4b8175fd2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "purses-bags",
+            "image": "shopify:\/\/shop_images\/savingPNG_32.jpg",
+            "subheading": "",
+            "title": "Purses + Bags",
+            "link_text": "view all",
+            "link_url": "shopify:\/\/collections\/purses-bags",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-3",
+        "collection-2",
+        "1dc1c346-d890-491d-b237-f09d0f0d08f0",
+        "b6a1d59d-21a4-479d-bac7-95f514264763",
+        "2a5de807-4011-4244-8644-e0a8fb3d200e",
+        "65bdf314-3322-455c-85c9-5bf4b8175fd2"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "collage",
+        "subheading": "",
+        "title": "Shop By Collection",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1654787035a7d264dd": {
+      "type": "logo-list",
+      "blocks": {
+        "1654787035e0d1c29f-0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/2_1200x1200_41632350-32ae-4436-b589-855643e4666a.jpg",
+            "link": "shopify:\/\/collections\/judy-blue"
+          }
+        },
+        "1654787035e0d1c29f-1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/fb0b074461933500e5be5be8a1698bed84d398050055827bd0d479b9669e4081.jpg",
+            "link": "shopify:\/\/collections\/dear-scarlett"
+          }
+        },
+        "1654787035e0d1c29f-3": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/image_1200x1200_d6736654-249b-4014-b342-e3fadc11770f.jpg",
+            "link": "https:\/\/shoprachelclark.com\/collections\/ampersand-avenue"
+          }
+        },
+        "c7dfd7c4-a5e0-4c77-9c40-c80b92544683": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Submark.png",
+            "link": "shopify:\/\/collections\/andree-by-unit"
+          }
+        },
+        "8cc238e8-2456-4bf1-b6df-631025ba53aa": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/302247723_775793937184527_335974070956114723_n.jpg",
+            "link": "shopify:\/\/collections\/doe-rae"
+          }
+        }
+      },
+      "block_order": [
+        "1654787035e0d1c29f-0",
+        "1654787035e0d1c29f-1",
+        "1654787035e0d1c29f-3",
+        "c7dfd7c4-a5e0-4c77-9c40-c80b92544683",
+        "8cc238e8-2456-4bf1-b6df-631025ba53aa"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "These are a few of our favorite things!",
+        "button_text": "",
+        "button_link": "",
+        "stack_logos": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "logo_background": "rgba(0,0,0,0)"
+      }
+    },
+    "165478723683a9d1c4": {
+      "type": "image-with-text",
+      "blocks": {
+        "1654787236022c8059-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullsizeoutput_58.jpeg",
+            "tab_label": "App Store",
+            "subheading": "",
+            "title": "Download the App on the App Store!",
+            "content": "<p>Shop on the go with our new app!<\/p>",
+            "button_text": "Download Now",
+            "button_link": "https:\/\/apps.apple.com\/us\/app\/a-boutique-by-rachel-clark\/id1483608476"
+          }
+        },
+        "a2a14e9d-6431-4c19-a916-fa913ac45c4e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullsizeoutput_59.jpeg",
+            "tab_label": "Google Play",
+            "subheading": "",
+            "title": "Download the App on Google play!",
+            "content": "<p>Shop on the go with our new app!<\/p>",
+            "button_text": "Download Now!",
+            "button_link": "https:\/\/play.google.com\/store\/apps\/details?id=com.shoprachelclark"
+          }
+        }
+      },
+      "block_order": [
+        "1654787236022c8059-0",
+        "a2a14e9d-6431-4c19-a916-fa913ac45c4e"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "8ddc82f0-d211-4606-a7ee-15da78692ec3": {
+      "type": "judgeme_carousel_section",
+      "settings": {
+        "maxwidth": 1080
+      }
+    },
+    "1655473637df5ac4e7": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "<a href=\"https:\/\/www.instagram.com\/aboutiquebyrachelclark\/\" target=\"_blank\">@aboutiquebyrachelclark<\/a>",
+        "title": "Shop Our Insta",
+        "html": "<script src=\"\/\/foursixty.com\/media\/scripts\/fs.slider.v2.5.js\" data-feed-id=\"a-boutique-by-rachel-clark\" data-theme=\"slider_v2_5\" data-open-links-in-same-page=\"true\" data-cell-size=\"20%\"><\/script>\n<style>.fs-has-links::after { padding:5px 7.5px;border:1px solid #ffffff;color:#ffffff;content:\"SHOP IT\"; } .fs-has-links:hover:after { background-color:#ffffff;color:rgba(0, 0, 0, 0.8); } .fs-wrapper { height:auto; } .fs-slider_v2_5  .fs-entry-container { height:0 !important;width:20%!important;padding-top:20%!important; } .fs-wrapper div.fs-text-container .fs-entry-title, div.fs-detail-title { font-family:Times New Roman, serif;font-style:normal;font-weight:normal;font-size:14px; } div.fs-text-container .fs-entry-date, div.fs-detail-container .fs-post-info, div.fs-wrapper div.fs-has-links::after, .fs-text-product, .fs-overlink-text { font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:14px; } .fs-wrapper div.fs-text-container * { color:#ffffff; } .fs-wrapper div.fs-text-container { background-color:rgba(0, 0, 0, 0.8);margin:0px; } div.fs-entry-date { display:none; } div.fs-entry-title { display:none; } .fs-slider_v2_5 .fs-wrapper div.fs-timeline-entry { margin:1px; } <\/style>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1654787570e9fd9def": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "Final Sale Items",
+        "content": "<p>All items ending in <strong>.99<\/strong> pricing are <strong>Final Sale<\/strong> and not eligible for return or exchange.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#f5f1ec",
+        "text_color": "#1a1a1a",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Free shipping",
+            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon_width": 50,
+            "title": "Customer service",
+            "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon_width": 50,
+            "title": "Secure payment",
+            "content": "<p>Your payment information is processed securely.<\/p>"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 50,
+            "title": "Contact us",
+            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/wooden-clothes-hangers-cling-emptily-to-the-shiny-shop-rack.jpg",
+        "subheading": "Subscribe to our newsletter",
+        "content": "<p>Promotions, new products, and sales. Directly to your inbox!<\/p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "8b55cb0a-def0-4516-b28c-54ef07da41cd",
+    "featured-collections",
+    "6327bcb4-db53-446a-966b-5d719bc4872b",
+    "16547858599386e3f7",
+    "2f8e6e47-d6a5-4c7b-8933-d62cbf2c74c3",
+    "image-with-text",
+    "blog-posts",
+    "collection-list",
+    "1654787035a7d264dd",
+    "165478723683a9d1c4",
+    "8ddc82f0-d211-4606-a7ee-15da78692ec3",
+    "1655473637df5ac4e7",
+    "1654787570e9fd9def",
+    "text-with-icons",
+    "newsletter"
+  ]
+}
