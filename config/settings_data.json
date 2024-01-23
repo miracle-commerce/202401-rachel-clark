@@ -14,7 +14,7 @@
     "header_text_color": "#1a1a1a",
     "footer_background": "#56112a",
     "footer_text_color": "#ffffff",
-    "primary_button_background": "#ef2266",
+    "primary_button_background": "#e70e56",
     "primary_button_text_color": "#ffffff",
     "secondary_button_background": "#f7aea6",
     "secondary_button_text_color": "#56112a",
@@ -72,12 +72,12 @@
           "message_9eDFGL": {
             "type": "message",
             "settings": {
-              "text": "Same Day Shipping Monday-Friday!",
+              "text": "Same Day Shipping Mon-Fri on all orders placed before 4pm est!!",
               "learn_more_text": "",
               "title": "",
               "content": "",
               "button_text": "",
-              "button_link": "https:\/\/Facebook.com\/groups\/shoprachelclark"
+              "button_link": ""
             }
           }
         },
@@ -87,9 +87,9 @@
         ],
         "settings": {
           "announcement_bar_position": "non_sticky",
-          "announcement_text_size": "small",
+          "announcement_text_size": "large",
           "autoplay": true,
-          "cycle_speed": 5,
+          "cycle_speed": 8,
           "background": "#051e38",
           "text_color": "#ffffff",
           "button_background": "#ffffff",
