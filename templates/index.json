@@ -22,15 +22,34 @@
             "overlay_opacity": 0
           }
         },
-        "14dfef74-43f4-4a86-9910-48341fe4e26b": {
+        "image_3A3rrw": {
           "type": "image",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_5028.png",
+            "image": "shopify:\/\/shop_images\/IMG_0331.png",
             "text_position": "middle_center",
             "subheading": "",
             "title": "",
             "button_1_text": "",
-            "button_1_link": "shopify:\/\/collections\/valentines-collection",
+            "button_1_link": "https:\/\/shoprachelclark.com\/collections\/sweater-sale",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "14dfef74-43f4-4a86-9910-48341fe4e26b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GoDaddyStudioPage-0_90.png",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "shopify:\/\/collections\/st-patty-s",
             "button_2_text": "",
             "button_2_link": "",
             "text_color": "#ffffff",
@@ -43,13 +62,14 @@
       },
       "block_order": [
         "ae3dfc8f-fb7b-41a7-834f-97d7b3d08c62",
+        "image_3A3rrw",
         "14dfef74-43f4-4a86-9910-48341fe4e26b"
       ],
       "settings": {
         "section_height": "auto",
         "transition_type": "fade",
         "autoplay": true,
-        "cycle_speed": 8,
+        "cycle_speed": 6,
         "background": "rgba(0,0,0,0)"
       }
     },
@@ -265,7 +285,7 @@
             "link_url": "",
             "text_color": "rgba(0,0,0,0)",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 60
           }
         },
         "collection-3": {
@@ -299,10 +319,10 @@
         "1dc1c346-d890-491d-b237-f09d0f0d08f0": {
           "type": "collection",
           "settings": {
-            "collection": "valentines-collection",
-            "image": "shopify:\/\/shop_images\/savingPNG_6.jpg",
+            "collection": "st-patty-s",
+            "image": "shopify:\/\/shop_images\/IMG_1461.jpg",
             "subheading": "",
-            "title": "Love is in the Air!",
+            "title": "Feeling Lucky!",
             "link_text": "VIew All",
             "link_url": "",
             "text_color": "rgba(0,0,0,0)",

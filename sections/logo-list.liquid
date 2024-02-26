@@ -73,7 +73,7 @@
             {%- endcapture -%}
 
             {%- if block.settings.link -%}
-              <a href="{{ block.settings.link }}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="logo-list__item" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.link }}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="logo-list__item" aria-label="{{block.settings.logo.alt}}" {{ block.shopify_attributes }}>
                 {{- logo_content -}}
               </a>
             {%- else -%}
